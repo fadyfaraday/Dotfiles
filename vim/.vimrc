@@ -17,10 +17,15 @@ set bg=dark
 set tabstop=2	 
 set ruler         " show the cursor position all the time
 set showcmd       " display incomplete commands
-set laststatus=2 " Always display the status line
+set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
 set modelines=0   " Disable modelines as a security precaution
 set nomodeline
+set autoread      " reload files when changed.
+set clipboard+=unnamed          " Yank and paste with system clipboard.
+set wildmenu                    " Wildcard searches.
+
+
 filetype plugin indent on
 set complete+=kspell " Autocomplete with dictionary words when spell check is on
 
@@ -34,8 +39,6 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
-nnoremap <leader>ri :RunInInteractiveShell<space>
-
 "fuzzy find (FZF)
 set rtp+=~/.fzf
 
@@ -57,7 +60,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
-plugin 'christoomey/vim-run-interactive'
+Plugin 'christoomey/vim-run-interactive'
 Plugin 'itchyny/lightline.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'vim-syntastic/syntastic'

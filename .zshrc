@@ -46,6 +46,7 @@ zplugin snippet OMZ::plugins/copydir/copydir.plugin.zsh
 zplugin snippet OMZ::plugins/vi-mode/vi-mode.plugin.zsh	
 zplugin snippet OMZ::plugins/git/git.plugin.zsh
 zplugin snippet OMZ::plugins/archlinux/archlinux.plugin.zsh	
+zplugin load zdharma/history-search-multi-word
 
 # Keybindings
 bindkey '^[[A' history-substring-search-up
@@ -66,5 +67,7 @@ chpwd() ls
   alias rg='rg -S'
   alias l="exa -lha"
   alias lt="exa -lhT"
-  alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+  alias ..='cd ..'
+  alias ...='cd ../..'
+  alias ....='cd ../../..'
 
