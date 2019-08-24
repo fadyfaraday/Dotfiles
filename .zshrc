@@ -52,7 +52,19 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 bindkey '^[[3~' delete-char
 bindkey '^[3;5~' delete-char
+
 export EDITOR='vim'
 export VISUAL='vim'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+
+#Custom cd when you cd into dir it will ls as well.
+chpwd() ls
+# Alias
+  alias history='fc -il 1' # for HIST_STAMPS in oh-my-zsh
+  alias gdw="git diff --color-words"
+  alias rg='rg -S'
+  alias l="exa -lha"
+  alias lt="exa -lhT"
+  alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
