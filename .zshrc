@@ -7,6 +7,7 @@ else
   compinit -C -i
 fi
 zmodload -i zsh/complist
+setopt +o nomatch
 
 # Save history so we get auto suggestions
 HISTFILE=$HOME/.zsh_history

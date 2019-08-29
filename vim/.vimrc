@@ -73,7 +73,7 @@ Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'suan/vim-instant-markdown'
 Plugin 'turbio/bracey.vim'
 Plugin 'valloric/matchtagalways'
-
+Plugin 'KabbAmine/zeavim.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
