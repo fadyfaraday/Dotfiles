@@ -7,6 +7,7 @@ else
   compinit -C -i
 fi
 zmodload -i zsh/complist
+
 setopt +o nomatch
 
 # Save history so we get auto suggestions
@@ -54,6 +55,24 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 bindkey '^[[3~' delete-char
 bindkey '^[3;5~' delete-char
+
+
+#start tmux automatically
+tmux attach &> /dev/null
+
+if [[ ! $TERM =~ screen ]]; then
+    exec tmux
+fi
+
+# Edit line in vim with ctrl-e:
+autoload edit-command-line; zle -N edit-command-line
+bindkey '^e' edit-command-line
+
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/"
+[ -n "$PS1" ] && \
+    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+        eval "$("$BASE16_SHELL/profile_helper.sh")"
 
 export EDITOR='vim'
 export VISUAL='vim'

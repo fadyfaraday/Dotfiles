@@ -440,4 +440,4 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 exec_always compton -f
-exec_always feh --bg-scale ~/Pictures/Rgyzbqv.png
+exec_always redshift
