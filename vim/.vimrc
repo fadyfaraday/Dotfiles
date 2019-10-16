@@ -74,6 +74,20 @@ Plugin 'suan/vim-instant-markdown'
 Plugin 'turbio/bracey.vim'
 Plugin 'valloric/matchtagalways'
 Plugin 'KabbAmine/zeavim.vim'
+Plugin 'junegunn/goyo.vim'
+Plugin 'dyng/ctrlsf.vim'
+Plugin 'prabirshrestha/asyncomplete.vim'
+Plugin 'mhinz/vim-startify'  
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'scrooloose/nerdcommenter' 
+
+
+
+if has('nvim') || has('patch-8.0.902')
+				  Plugin 'mhinz/vim-signify'
+	else
+					  Plugin 'mhinz/vim-signify', { 'branch': 'legacy' }
+		endif
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
