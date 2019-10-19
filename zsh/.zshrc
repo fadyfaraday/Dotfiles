@@ -91,3 +91,5 @@ chpwd() ls
   alias ...='cd ../..'
   alias ....='cd ../../..'
 
+
+eval $(thefuck --alias)

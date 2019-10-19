@@ -187,6 +187,7 @@ npm-check-updates
 nss-mdns
 ntfs-3g
 ntp
+thefuck
 open-fuse-iso
 openresolv
 openssh
